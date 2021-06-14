@@ -26,6 +26,9 @@ module.exports = {
         'lightprimary': '#E9F0FD',
         'whiteprimary': '#F8FAFF',
       },
+      minWidth: {
+        'screen-md': '768px'
+      }
     },
   },
   variants: {

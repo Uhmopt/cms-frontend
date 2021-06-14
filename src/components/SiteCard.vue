@@ -1,5 +1,5 @@
 <template>
-  <div class="w-1/4 px-4">
+  <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-4 mb-5">
     <div class="border rounded">
       <div class="h-32 py-1.5 flex items-center justify-center box-content">
         <img :src="site.avatar" />
