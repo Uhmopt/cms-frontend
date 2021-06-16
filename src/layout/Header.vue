@@ -4,7 +4,8 @@
       class="
         w-full
         md:w-max
-        flex md:flex-shrink-0
+        flex
+        md:flex-shrink-0
         items-center
         border-b
         h-full
@@ -31,12 +32,33 @@
     >
       <SearchField />
       <ul class="items-center text-base mr-6 hidden xl:flex">
-        <li class="mx-3"><router-link to="/">Pages</router-link></li>
-        <li class="mx-3"><router-link to="/">Directory</router-link></li>
-        <li class="mx-3"><router-link to="/">Content</router-link></li>
-        <li class="mx-3"><router-link to="/">Team</router-link></li>
-        <li class="mx-3"><router-link to="/">Templates</router-link></li>
-        <li class="mx-3"><router-link to="/">Settings</router-link></li>
+        <li class="mx-3">
+          <router-link to="/"><span>Pages</span></router-link>
+        </li>
+        <li class="mx-3">
+          <router-link to="/"><span>Directory</span></router-link>
+        </li>
+        <li class="mx-3">
+          <router-link to="/" class="flex items-center">
+            <span>Content</span>
+            <img src="../assets/images/icons/caret.svg" class="ml-3" />
+          </router-link>
+        </li>
+        <li class="mx-3">
+          <router-link to="/" class="flex items-center">
+            <span>Team</span>
+            <img src="../assets/images/icons/caret.svg" class="ml-3" />
+          </router-link>
+        </li>
+        <li class="mx-3">
+          <router-link to="/" class="flex items-center">
+            <span>Templates</span>
+            <img src="../assets/images/icons/caret.svg" class="ml-3" />
+          </router-link>
+        </li>
+        <li class="mx-3">
+          <router-link to="/"><span>Settings</span></router-link>
+        </li>
       </ul>
       <button
         class="
@@ -122,6 +144,8 @@ import SearchField from "../components/SearchField.vue";
 
 export default {
   name: "Header",
-  components: { SearchField },
+  components: {
+    SearchField,
+  },
 };
 </script>

@@ -60,28 +60,15 @@
         </table>
       </div>
       <div class="flex justify-center items-center">
-        <paginate
-          :page-count="15"
-          :margin-pages="3"
-          :page-range="3"
-          :container-class="'flex'"
-          :prev-link-class="'flex fa fa-angle-left w-8 h-8 items-center justify-center box-content rounded mx-1 text-lg mr-5'"
-          :next-link-class="'flex fa fa-angle-right w-8 h-8 items-center justify-center box-content rounded mx-1 text-lg ml-5'"
-          :prev-text="''"
-          :next-text="''"
-          :active-class="'bg-primary text-white'"
-          :page-class="'w-8 h-8 flex items-center justify-center box-content rounded mx-1 text-sm'"
-        >
-        </paginate>
+        <Pagination :pageCount="15" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import "font-awesome/css/font-awesome.min.css";
-import Paginate from "vuejs-paginate";
 import SiteCard from "../../components/SiteCard.vue";
+import Pagination from "../../components/Pagination.vue";
 import StaffCard from "../../components/StaffCard.vue";
 import DeskVantageAvatar from "../../assets/images/deskvantage.png";
 import NikeAvatar from "../../assets/images/nike.png";
@@ -93,7 +80,7 @@ import ProfileNo5 from "../../assets/images/users/5.png";
 
 export default {
   name: "Home",
-  components: { SiteCard, StaffCard, Paginate },
+  components: { SiteCard, StaffCard, Pagination },
   data: () => {
     return {
       tableCols: [
@@ -178,6 +165,54 @@ export default {
           name: "Logo.png",
         },
         {
+          id: 6,
+          username: "25/06/2020 04:55 PM",
+          sitename: "English Transcription",
+          staff: {
+            name: "Serhii Movchan",
+            role: "Manager",
+            avatar: ProfileNo2,
+          },
+          action: "Add New File",
+          name: "Logo.png",
+        },
+        {
+          id: 6,
+          username: "25/06/2020 04:55 PM",
+          sitename: "English Transcription",
+          staff: {
+            name: "Serhii Movchan",
+            role: "Manager",
+            avatar: ProfileNo2,
+          },
+          action: "Add New File",
+          name: "Logo.png",
+        },
+        {
+          id: 6,
+          username: "25/06/2020 04:55 PM",
+          sitename: "English Transcription",
+          staff: {
+            name: "Serhii Movchan",
+            role: "Manager",
+            avatar: ProfileNo2,
+          },
+          action: "Add New File",
+          name: "Logo.png",
+        },
+        {
+          id: 6,
+          username: "25/06/2020 04:55 PM",
+          sitename: "English Transcription",
+          staff: {
+            name: "Serhii Movchan",
+            role: "Manager",
+            avatar: ProfileNo2,
+          },
+          action: "Add New File",
+          name: "Logo.png",
+        },
+        {
           id: 7,
           username: "25/06/2020 04:55 PM",
           sitename: "English Transcription",
@@ -231,6 +266,11 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    pageCount: function () {
+      return Math.ceil(this.rowData.length / 10);
+    },
   },
 };
 </script>
